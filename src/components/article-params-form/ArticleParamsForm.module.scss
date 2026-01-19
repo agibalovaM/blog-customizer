@@ -25,6 +25,12 @@
 	border-right: 1px solid #000000;
 }
 
+.fields {
+	display: flex;
+	flex-direction: column;
+	row-gap: 24px;
+}
+
 .bottomContainer {
 	display: flex;
 	justify-content: space-between;
