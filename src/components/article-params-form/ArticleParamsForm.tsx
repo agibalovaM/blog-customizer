@@ -31,10 +31,10 @@ export const ArticleParamsForm = ({
 	isOpen: isOpenProp,
 	form,
 }: ArticleParamsFormProps) => {
-	const [isOpenState, setIsOpenState] = useState(false);
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const formRef = useRef<HTMLElement>(null);
 	const buttonRef = useRef<HTMLDivElement>(null);
-	const isOpen = isOpenProp ?? isOpenState;
+	const isOpen = isOpenProp ?? isMenuOpen;
 	const isControlled = isOpenProp !== undefined;
 	const { state: formState, onChange, onApply, onReset } = form;
 
@@ -51,7 +51,7 @@ export const ArticleParamsForm = ({
 			if (buttonRef.current?.contains(target)) {
 				return;
 			}
-			setIsOpenState(false);
+			setIsMenuOpen(false);
 		};
 
 		document.addEventListener('mousedown', handleClickOutside);
@@ -65,7 +65,7 @@ export const ArticleParamsForm = ({
 		if (isControlled) {
 			return;
 		}
-		setIsOpenState((prevState) => !prevState);
+		setIsMenuOpen((prevState) => !prevState);
 	};
 
 	const handleOptionChange = (field: keyof ArticleStateType) => {
