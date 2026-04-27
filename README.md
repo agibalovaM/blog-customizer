@@ -1,54 +1,39 @@
-# Проектная работа: Вёрстка проекта
+# 🎨 Blog Customizer
 
-## Шаг первый. Изучаем имеющиеся компоненты
+UI application for customizing article styles using a settings panel and CSS variables.
 
-[Макет проекта](https://www.figma.com/file/FEeiiGLOsE7ktXbPpBxYoD/Custom-dropdown?type=design&node-id=0%3A1&mode=design&t=eXRJnWC6Xsuw0qR4-1)
+---
 
-Для запуска Storybook выполните:
+## 🚀 Features
 
-```
-npm run storybook
-```
+- Sidebar with style settings (open/close interaction)  
+- Form for configuring article appearance  
+- Applying changes only after user confirmation  
+- Reset functionality to default styles  
+- Styling via CSS variables  
 
-Для запуска линтера для стилей выполните:
+---
 
-```
-npm run stylelint
-```
+## 🧠 Implementation
 
-Для запуска линтера выполните:
+- Managed separate states for form and page  
+- Applied changes only on user action (“Apply”)  
+- Synced UI controls with CSS variables  
+- Implemented interaction between form and main content  
 
-```
-npm run lint
-```
+---
 
-Для запуска форматтера выполните:
+## 🛠 Tech Stack
 
-```
-npm run format
-```
+- React  
+- TypeScript  
+- CSS (variables)  
+- Storybook  
 
-### Функциональные требования
+---
 
-- При нажатии на «стрелку» открывается сайдбар с настройками, при повторном нажатии или клике вне сайдбар закрывается.
-- При изменении настроек в сайдбаре они не применяются сразу.
-- После нажатия на «применить» стили применяются к статье.
-- При нажатии «сбросить» настройки в форме сбрасываются на начальные, которые были при открытии страницы, и стили применяются к статье.
-- Настройки устанавливаются через CSS-переменные, которые уже есть в стилях и установлены в коде в дефолтные значения.
+## 📦 Installation
 
-## Шаг второй. Реализация формы
-
-Продумайте следующие моменты, прежде чем приступать к коду: 
-
-- как будет организована композиция,
-- где вы будете хранить состояние,
-- как передавать данные между формой и страницей.
-
-Затем реализуйте механику открытия-закрытия панели с формой, после этого можно будет временно зафиксировать ее пропсом для удобства реализации.
-
-После этого реализуйте форму из имеющихся компонент согласно макету.
-
-
-## Шаг третий. Обеспечьте передачу данных между формой и страницей
-
-Реализуйте по отдельности сохранение состояния страницы и состояние формы. Обеспечьте применение нового состояния после нажатия на «применить». 
+```bash
+npm install
+npm start
